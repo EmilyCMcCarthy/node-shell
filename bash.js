@@ -14,7 +14,7 @@ process.stdin.on('data', function (data) {
         var input = userInput.slice(indexFirstSpace+1);
     }
     if(command[cmd])
-        input ? command[cmd](input) : command[cmd]();
+        command[cmd](input);
     else{
         process.stdout.write('You typed: ' +cmd);
     }
@@ -22,3 +22,4 @@ process.stdin.on('data', function (data) {
 
 
 
+//
